@@ -35,7 +35,7 @@ const Feed = () => {
           variant='body1'
           sx={{ mt: 1.5, color: '#ccc' }}
         >
-          Jonathan Peña - Youtubo
+          Yuotubo ~ Jonathan Peña
         </Typography>
       </Box>
 
