@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import ReactPlayer from "react-player";
-import { Typography, Box, Stack } from "@mui/material";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import ReactPlayer from 'react-player';
+import { Typography, Box, Stack } from '@mui/material';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-import { Videos, Loader } from "./";
-import { fetchFromAPI } from "../utils/fetchAPI";
+import { Videos, Loader } from './';
+import { fetchFromAPI } from '../utils/fetchAPI';
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
@@ -30,49 +30,49 @@ const VideoDetail = () => {
   } = videoDetail;
 
   return (
-    <Box minHeight="95vh">
-      <Stack direction={{ xs: "column", lg: "row" }}>
+    <Box minHeight='95vh'>
+      <Stack direction={{ xs: 'column', lg: 'row' }}>
         <Box flex={1}>
           <Box
-            className="mx-auto"
+            className='mx-auto'
             sx={{
-              width: "92.5%",
-              height: "auto",
-              position: "sticky",
-              top: "90px",
+              width: '92.5%',
+              height: 'auto',
+              position: 'sticky',
+              top: '90px',
             }}
           >
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
-              className="react-player"
+              className='react-player'
               controls
             />
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+            <Typography color='#fff' variant='h5' fontWeight='bold' p={2}>
               {title}
             </Typography>
             <Stack
-              direction="row"
-              justifyContent="space-between"
-              sx={{ color: "#fff" }}
+              direction='row'
+              justifyContent='space-between'
+              sx={{ color: '#fff' }}
               py={1}
               px={2}
             >
               <Link to={`/channel/${channelId}`}>
                 <Typography
-                  variant={{ sm: "subtitle1", md: "h6" }}
-                  color="#fff"
+                  variant={{ sm: 'subtitle1', md: 'h6' }}
+                  color='#fff'
                 >
                   {channelTitle}
                   <CheckCircleIcon
-                    sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
+                    sx={{ fontSize: '12px', color: 'gray', ml: '5px' }}
                   />
                 </Typography>
               </Link>
-              <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+              <Stack direction='row' gap='20px' alignItems='center'>
+                <Typography variant='body1' sx={{ opacity: 0.7 }}>
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography variant='body1' sx={{ opacity: 0.7 }}>
                   {parseInt(likeCount).toLocaleString()} likes
                 </Typography>
               </Stack>
@@ -82,10 +82,10 @@ const VideoDetail = () => {
         <Box
           px={2}
           py={{ md: 2.5, xs: 5 }}
-          justifyContent="center"
-          alignItems="center"
+          justifyContent='center'
+          alignItems='center'
         >
-          <Videos videos={videos} direction={{ xs: "row", lg: "column" }} />
+          <Videos videos={videos} direction={{ xs: 'row', lg: 'column' }} />
         </Box>
       </Stack>
     </Box>

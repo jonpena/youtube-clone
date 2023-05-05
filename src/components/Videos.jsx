@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Stack, Box } from "@mui/material";
+import { Stack, Box } from '@mui/material';
 
-import { ChannelCard, Loader, VideoCard } from "./";
+import { ChannelCard, Loader, VideoCard } from './';
 
 // eslint-disable-next-line react/prop-types
 const Videos = ({ videos, direction }) => {
@@ -9,10 +9,10 @@ const Videos = ({ videos, direction }) => {
 
   return (
     <Stack
-      direction={direction || "row"}
-      flexWrap="wrap"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+      direction={direction || 'row'}
+      flexWrap='wrap'
+      justifyContent='flex-start'
+      alignItems='flex-start'
       gap={1.8}
     >
       {videos.map((item, index) => (

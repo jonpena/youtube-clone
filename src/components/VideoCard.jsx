@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
-import { Typography, Card, CardContent, CardMedia } from "@mui/material";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { Link } from 'react-router-dom';
+import { Typography, Card, CardContent, CardMedia } from '@mui/material';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const VideoCard = ({
   video: {
@@ -11,9 +11,9 @@ const VideoCard = ({
 }) => (
   <Card
     sx={{
-      width: { xs: "90%", sm: "360px", md: "300px" },
-      margin: "auto",
-      boxShadow: "none",
+      width: { xs: '90%', sm: '360px', md: '300px' },
+      margin: 'auto',
+      boxShadow: 'none',
       borderRadius: 0,
       borderTopLeftRadius: 8,
       borderTopRightRadius: 8,
@@ -23,20 +23,20 @@ const VideoCard = ({
       <CardMedia
         image={snippet?.thumbnails?.high?.url}
         alt={snippet?.title}
-        sx={{ width: { xs: "100%", sm: "358px" }, height: 180 }}
+        sx={{ width: { xs: '100%', sm: '358px' }, height: 180 }}
       />
     </Link>
-    <CardContent sx={{ backgroundColor: "#101010", height: "106px" }}>
+    <CardContent sx={{ backgroundColor: '#101010', height: '106px' }}>
       <Link to={`/video/${videoId}`}>
-        <Typography variant="subtitle1" fontWeight="bold" color="white">
+        <Typography variant='subtitle1' fontWeight='bold' color='white'>
           {snippet?.title.slice(0, 60)}
         </Typography>
       </Link>
       <Link to={`/channel/${snippet?.channelId}`}>
-        <Typography variant="subtitle2" color="gray">
+        <Typography variant='subtitle2' color='gray'>
           {snippet?.channelTitle}
           <CheckCircleIcon
-            sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
+            sx={{ fontSize: '12px', color: 'gray', ml: '5px' }}
           />
         </Typography>
       </Link>

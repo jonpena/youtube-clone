@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { useEffect, useState } from 'react';
+import { Box, Stack, Typography } from '@mui/material';
 
-import { fetchFromAPI } from "../utils/fetchAPI";
-import { Videos, Sidebar } from "./";
+import { fetchFromAPI } from '../utils/fetchAPI';
+import { Videos, Sidebar } from './';
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Noticias");
+  const [selectedCategory, setSelectedCategory] = useState('Noticias');
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
@@ -17,11 +17,11 @@ const Feed = () => {
   }, [selectedCategory]);
 
   return (
-    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+    <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
       <Box
         sx={{
-          height: { sx: "auto", md: "92vh" },
-          borderRight: "1px solid #3d3d3d",
+          height: { sx: 'auto', md: '92vh' },
+          borderRight: '1px solid #3d3d3d',
           px: { sx: 0, md: 2 },
         }}
       >
@@ -31,22 +31,22 @@ const Feed = () => {
         />
 
         <Typography
-          className="copyright"
-          variant="body1"
-          sx={{ mt: 1.5, color: "#ccc" }}
+          className='copyright'
+          variant='body1'
+          sx={{ mt: 1.5, color: '#ccc' }}
         >
           Jonathan Peña - Youtubo
         </Typography>
       </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
         <Typography
-          variant="h4"
-          fontWeight="bold"
+          variant='h4'
+          fontWeight='bold'
           mb={2}
-          sx={{ color: "white" }}
+          sx={{ color: 'white' }}
         >
-          <span className="text-[#FC1503]">Videos de </span>
+          <span className='text-[#FC1503]'>Videos de </span>
           {selectedCategory}
         </Typography>
 
