@@ -2,7 +2,6 @@ import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import { SearchBar } from './';
-import { BASE_URI } from '../utils/constants';
 
 const Navbar = () => (
   <Stack
@@ -19,7 +18,7 @@ const Navbar = () => (
     <Link to='/' style={{ display: 'flex', alignItems: 'center' }}>
       <img
         className='ml-2'
-        src={`${BASE_URI}/assets/youtube-icon.png`}
+        src={`./assets/youtube-icon.png`}
         alt='logo'
         width={48}
         height={48}

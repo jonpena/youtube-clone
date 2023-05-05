@@ -31,4 +31,7 @@ export const categories = [
 ];
 
 export const BASE_URI = '/youtube-clone';
+
+/**Activa esta constante si vas a trabajar localmente **/
+
 // export const BASE_URI = '/';
