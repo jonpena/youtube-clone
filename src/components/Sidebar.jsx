@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Stack } from "@mui/material";
 
 import { categories } from "../utils/constants";

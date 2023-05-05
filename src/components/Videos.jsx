@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Stack, Box } from "@mui/material";
 
 import { ChannelCard, Loader, VideoCard } from "./";
 
+// eslint-disable-next-line react/prop-types
 const Videos = ({ videos, direction }) => {
   if (!videos?.length) return <Loader />;
 

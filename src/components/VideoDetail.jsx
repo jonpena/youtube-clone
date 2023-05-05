@@ -12,8 +12,6 @@ const VideoDetail = () => {
   const [videos, setVideos] = useState(null);
   const { id } = useParams();
 
-  // let mql = window.matchMedia("(min-width: 900px)");
-
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
       setVideoDetail(data.items[0])

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Link } from "react-router-dom";
 
-const ChannelCard = ({ channelDetail, marginTop }) => (
+const ChannelCard = ({ channelDetail }) => (
   <Box
     sx={{
       boxShadow: "none",
