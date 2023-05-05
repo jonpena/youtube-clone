@@ -29,3 +29,6 @@ export const categories = [
   { name: 'Gimnasio', icon: <FitnessCenterIcon /> },
   { name: 'Criptomonedas', icon: <DeveloperModeIcon /> },
 ];
+
+export const BASE_URI = '/youtube-clone';
+// export const BASE_URI = '/';

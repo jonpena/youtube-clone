@@ -30,16 +30,16 @@ const VideoDetail = () => {
   } = videoDetail;
 
   return (
-    <Box minHeight='95vh'>
-      <Stack direction={{ xs: 'column', lg: 'row' }}>
+    <Box minHeight='100vh'>
+      <Stack direction={{ xs: 'column', lg: 'row' }} className='px-2'>
         <Box flex={1}>
           <Box
             className='mx-auto'
             sx={{
-              width: '92.5%',
+              width: '92%',
               height: 'auto',
               position: 'sticky',
-              top: '90px',
+              top: '85px',
             }}
           >
             <ReactPlayer
@@ -47,14 +47,16 @@ const VideoDetail = () => {
               className='react-player'
               controls
             />
+
             <Typography color='#fff' variant='h5' fontWeight='bold' p={2}>
               {title}
             </Typography>
+
             <Stack
               direction='row'
               justifyContent='space-between'
               sx={{ color: '#fff' }}
-              py={1}
+              py={0}
               px={2}
             >
               <Link to={`/channel/${channelId}`}>
@@ -81,7 +83,7 @@ const VideoDetail = () => {
         </Box>
         <Box
           px={2}
-          py={{ md: 2.5, xs: 5 }}
+          py={{ md: 2, xs: 5 }}
           justifyContent='center'
           alignItems='center'
         >

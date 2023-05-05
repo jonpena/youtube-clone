@@ -29,7 +29,7 @@ const SearchBar = () => {
         border: '1px solid #303030',
         pr: 1,
         boxShadow: 'none',
-        mr: { sm: 2 },
+        mr: { sm: 2, md: 15 },
       }}
     >
       <input
