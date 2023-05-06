@@ -23,7 +23,9 @@ const Navbar = () => (
         width={48}
         height={48}
       />
-      <span className='text-white font-semibold text-xl ml-2'>YuoTubo</span>
+      <span className='text-white font-semibold text-xl ml-2 hidden sm:inline-block'>
+        YuoTubo
+      </span>
     </Link>
     <SearchBar />
   </Stack>
