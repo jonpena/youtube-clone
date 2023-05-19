@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Stack } from '@mui/material';
 
-import { categories } from '../utils/constants';
+import { categories } from '../constants/constants';
 
 const Categories = ({ selectedCategory, setSelectedCategory }) => (
   <Stack

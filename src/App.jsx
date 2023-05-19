@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { ChannelDetail, VideoDetail, SearchFeed, Feed } from './components';
 import Layout from './containers/Layout';
-import { BASE_URI } from './utils/constants';
+import { BASE_URI } from './constants/constants';
 
 const App = () => (
   <BrowserRouter basename={BASE_URI}>

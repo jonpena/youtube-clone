@@ -11,7 +11,7 @@ const VideoCard = ({
 }) => (
   <Card
     sx={{
-      width: { xs: '90%', sm: '360px', md: '300px' },
+      width: { xs: '415px', sm: '320px', md: '300px' },
       margin: 'auto',
       boxShadow: 'none',
       borderRadius: 0,
