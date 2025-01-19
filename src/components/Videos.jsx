@@ -1,19 +1,15 @@
 /* eslint-disable react/prop-types */
-import { Stack, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 import { ChannelCard, Loader, VideoCard } from './';
 
-// eslint-disable-next-line react/prop-types
-const Videos = ({ videos, direction }) => {
+const Videos = ({ videos }) => {
   if (!videos?.length) return <Loader />;
 
   return (
-    <Stack
-      direction={direction || 'row'}
-      flexWrap='wrap'
-      alignItems='flex-start'
-      sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}
-      gap={1.8}
+    <div
+      className={`grid gap-2 grid-cols-[repeat(auto-fit,minmax(300px,300px))]
+      `}
     >
       {videos.map((item, index) => (
         <Box key={index}>
@@ -21,7 +17,7 @@ const Videos = ({ videos, direction }) => {
           {item.id.channelId && <ChannelCard channelDetail={item} />}
         </Box>
       ))}
-    </Stack>
+    </div>
   );
 };
 

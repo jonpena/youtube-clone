@@ -5,7 +5,7 @@ import { Navbar } from '../components';
 const Layout = ({ ...props }) => {
   return (
     <Box sx={{ background: '#101010', minHeight: '100vh' }}>
-      <Box className='max-w-screen-2xl bg-[#101010]'>
+      <Box className=' bg-[#101010]'>
         <Navbar />
         {props.children}
       </Box>

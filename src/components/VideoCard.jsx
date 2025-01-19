@@ -11,32 +11,71 @@ const VideoCard = ({
 }) => (
   <Card
     sx={{
-      width: { xs: '415px', sm: '320px', md: '300px' },
-      margin: 'auto',
+      width: { xs: '95vw', sm: '320px', md: '300px' },
       boxShadow: 'none',
       borderRadius: 0,
-      borderTopLeftRadius: 8,
-      borderTopRightRadius: 8,
+      backgroundColor: 'transparent',
+      display: 'flex',
+      flexDirection: 'column',
+      paddingRight: 0,
     }}
   >
     <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
       <CardMedia
         image={snippet?.thumbnails?.high?.url}
         alt={snippet?.title}
-        sx={{ width: { xs: '100%', sm: '358px' }, height: 180 }}
+        sx={{
+          width: '100%',
+          paddingTop: '56.25%',
+          borderRadius: '12px',
+          '&:hover': {
+            transform: 'scale(1.02)',
+            transition: 'transform 0.3s ease-in-out',
+          },
+        }}
       />
     </Link>
-    <CardContent sx={{ backgroundColor: '#101010', height: '106px' }}>
+    <CardContent
+      sx={{
+        backgroundColor: 'transparent',
+        height: '106px',
+        padding: '12px 0',
+        '&:last-child': { paddingBottom: 0 },
+      }}
+    >
       <Link to={`/video/${videoId}`}>
-        <Typography variant='subtitle1' fontWeight='bold' color='white'>
-          {snippet?.title.slice(0, 60)}
+        <Typography
+          variant='subtitle1'
+          fontWeight='bold'
+          color='white'
+          sx={{
+            lineHeight: '1.2',
+            marginBottom: '4px',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {snippet?.title}
         </Typography>
       </Link>
       <Link to={`/channel/${snippet?.channelId}`}>
-        <Typography variant='subtitle2' color='gray'>
+        <Typography
+          variant='subtitle2'
+          color='gray'
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            '&:hover': {
+              color: 'white',
+            },
+          }}
+        >
           {snippet?.channelTitle}
           <CheckCircleIcon
-            sx={{ fontSize: '12px', color: 'gray', ml: '5px' }}
+            sx={{ fontSize: '14px', color: 'gray', ml: '5px' }}
           />
         </Typography>
       </Link>

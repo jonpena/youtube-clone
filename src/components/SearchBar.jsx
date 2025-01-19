@@ -34,7 +34,7 @@ const SearchBar = () => {
     >
       <input
         className='w-96 h-full pl-4 flex rounded-s-full bg-[#121212] search-bar border-none outline-none text-white'
-        placeholder='Buscar'
+        placeholder='Search'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       ></input>
